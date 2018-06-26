@@ -151,13 +151,22 @@ function getNextBus(schedule) {
 
 function app() {
   if (dayofWeek === 'Sunday') {
-    return 'No meatball for you!';
+    document.getElementById('wrapper').innerHTML= '<h2>No Meatball for you!</h2>';
   }
   else if (dayofWeek === 'Saturday') {
-    return [getNextBus(sat_to_Furuset), getNextBus(sat_to_Slependen), getNextBus(sat_from_Furuset), getNextBus(sat_from_Slependen)];
+    let times = [getNextBus(sat_to_Furuset), getNextBus(sat_to_Slependen), getNextBus(sat_from_Furuset), getNextBus(sat_from_Slependen)];
+    document.getElementById('to_Furuset').innerHTML= times[0];
+    document.getElementById('to_Slependen').innerHTML= times[1];
+    document.getElementById('from_Furuset').innerHTML= times[2];
+    document.getElementById('from_Slependen').innerHTML= times[3];
+
   }
   else {
-    return [getNextBus(to_Furuset), getNextBus(to_Slependen), getNextBus(from_Furuset), getNextBus(from_Slependen)];
+    let times = [getNextBus(to_Furuset), getNextBus(to_Slependen), getNextBus(from_Furuset), getNextBus(from_Slependen)];
+    document.getElementById('to_Furuset').innerHTML= times[0];
+    document.getElementById('to_Slependen').innerHTML= times[1];
+    document.getElementById('from_Furuset').innerHTML= times[2];
+    document.getElementById('from_Slependen').innerHTML= times[3];
   }
 }
 
@@ -166,4 +175,4 @@ function test() {
   console.log(app()[2]);
 }
 
-test();
+app();
