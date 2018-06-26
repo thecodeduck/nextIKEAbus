@@ -3,21 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Next IKEA Bus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body>
-    <div id="wrapper">
-      <h2>Next IKEA Bus to</h2>
-      <p>Furuset</p>
-      <p id="to_Furuset"></p>
-      <p>Slependen</p>
-      <p id="to_Slependen"></p>
+  <body style="background-color:#3399FD;font-family:Verdana,sans-serif;">
+    <div id="wrapper" style="margin:auto;text-align:center;max-width:400px;">
+      <div>
+        <h2 style="color:#f9d700">Next IKEA Bus to</h2>
+        <div style="background-color:rgba(255, 255, 255, 0.2);padding:10px;border-radius:10px;">
+            <p style="color:#fff">Nice IKEA</p>
+            <h2 id="to_Slependen" style="color:#fff"></h2>
+          </div>
+          <div>
+            <p style="color:#fff">Tiny IKEA</p>
+            <h2 id="to_Furuset" style="color:#fff"></h2>
+          </div>
 
-      <h2>Next IKEA Bus from</h2>
-      <p>Furuset</p>
-      <p id="from_Furuset"></p>
-      <p>Slependen</p>
-      <p id="from_Slependen"></p>
-    </div>
+      </div>
+
+      <hr style="color:#f9d700"/>
+
+      <div>
+        <h2 style="color:#f9d700">Next IKEA Bus from</h2>
+          <div style="background-color:rgba(255, 255, 255, 0.2);padding:10px;border-radius:10px;">
+            <p style="color:#fff">Nice IKEA</p>
+            <h2 id="from_Slependen" style="color:#fff"></h2>
+          </div>
+          <div>
+            <p style="color:#fff">Tiny IKEA</p>
+            <h2 id="from_Furuset" style="color:#fff"></h2>
+          </div>
+      </div>
+    </div> <!--end wrapper -->
   </body>
   <script src="test.js"></script>
 </html>
