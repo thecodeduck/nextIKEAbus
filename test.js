@@ -123,9 +123,7 @@ const sat_from_Slependen = [
 let today = new Date();
 let weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednseday', 'Thursday', 'Friday', 'Saturday')
 let dayofWeek = weekday[today.getDay()];
-// let dayofWeek = 'Sunday';
 let hour = today.getHours();
-// let minute = today.getMinutes();
 let minute = cleanMinutes();
 let currentTime = String(hour + "." + minute)
 
@@ -146,7 +144,11 @@ function getNextBus(schedule) {
       break
     }
   }
-  return upcoming.toFixed(2);
+  if (upcoming) {
+    return upcoming.toFixed(2);
+  } else {
+    return 'Closed';
+  }
 }
 
 function app() {
@@ -168,11 +170,6 @@ function app() {
     document.getElementById('from_Furuset').innerHTML= times[2];
     document.getElementById('from_Slependen').innerHTML= times[3];
   }
-}
-
-function test() {
-  console.log(dayofWeek);
-  console.log(app()[2]);
 }
 
 app();
